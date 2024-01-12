@@ -22,7 +22,7 @@ def search_on_elastic():
     knn_num = request.args.get('knn_num')
     document = request.args.get('document')
     
-    abstract = str(document).replace("_", " ")
+    abstract = str(document).replace("+", " ")
     
     embedded_abstract = embeddings.embed_query(abstract)
 
